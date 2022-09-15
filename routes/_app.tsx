@@ -5,6 +5,7 @@ export default function App({ Component }: AppProps) {
   return (
     <>
       <Head>
+        <link rel="stylesheet" href="/app.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -13,9 +14,9 @@ export default function App({ Component }: AppProps) {
         />
         <link
           href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap"
-          rel="stylesheet"
+          rel="preload"
+          as="style"
         />
-        <link rel="stylesheet" href="/app.css" />
       </Head>
       <Component />
     </>
