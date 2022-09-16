@@ -1,4 +1,6 @@
-# fresh project
+# SQL cheatsheet
+
+Built on top of [Fresh](https://fresh.deno.dev/) and [Deno Deploy](https://deno.com/deploy).
 
 ### Usage
 
