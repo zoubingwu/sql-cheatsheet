@@ -12,6 +12,7 @@ export default function App({ Component }: AppProps) {
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
+        <link rel="preconnect" href="https://unpkg.com" />
       </Head>
       <Component />
       <link
