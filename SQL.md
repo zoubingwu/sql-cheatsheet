@@ -90,7 +90,6 @@ Fetch names of cities that are neither Berlin nor Madrid:
 ```sql
 SELECT name
 FROM city
-CITY
 WHERE name != 'Berlin'
   AND name != 'Madrid';
 ```
@@ -154,7 +153,40 @@ FROM city
 [INNER] JOIN country
 ```
 
-TODO img
+<table id="inner_join">
+  <tr>
+    <th colspan="3" scope="row">CITY</th>
+    <th colspan="2" scope="row">COUNTRY</th>
+  </tr>
+  <tr>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+    <th scope="row">country_id</th>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Paris</td>
+    <td>1</td>
+    <td>1</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Berlin</td>
+    <td>2</td>
+    <td>2</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Warsaw</td>
+    <td>4</td>
+    <td>NULL</td>
+    <td>NULL</td>
+  </tr>
+</table>
 
 ### LEFT JOIN
 
@@ -169,7 +201,40 @@ LEFT JOIN country
 ON city.country_id = country.id;
 ```
 
-TODO img
+<table id="left_join">
+  <tr>
+    <th colspan="3" scope="row">CITY</th>
+    <th colspan="2" scope="row">COUNTRY</th>
+  </tr>
+  <tr>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+    <th scope="row">country_id</th>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Paris</td>
+    <td>1</td>
+    <td>1</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Berlin</td>
+    <td>2</td>
+    <td>2</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Warsaw</td>
+    <td>4</td>
+    <td>NULL</td>
+    <td>NULL</td>
+  </tr>
+</table>
 
 ### RIGHT JOIN
 
@@ -184,7 +249,40 @@ RIGHT JOIN country
 ON city.country_id = country.id;
 ```
 
-TODO img
+<table id="right_join">
+  <tr>
+    <th colspan="3" scope="row">CITY</th>
+    <th colspan="2" scope="row">COUNTRY</th>
+  </tr>
+  <tr>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+    <th scope="row">country_id</th>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Paris</td>
+    <td>1</td>
+    <td>1</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Berlin</td>
+    <td>2</td>
+    <td>2</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>NULL</td>
+    <td>NULL</td>
+    <td>NULL</td>
+    <td>3</td>
+    <td>Iceland</td>
+  </tr>
+</table>
 
 ### FULL JOIN
 
@@ -198,7 +296,47 @@ FULL [OUTER] JOIN country
 ON city.country_id = country.id;
 ```
 
-TODO img
+<table id="full_join">
+  <tr>
+    <th colspan="3" scope="row">CITY</th>
+    <th colspan="2" scope="row">COUNTRY</th>
+  </tr>
+  <tr>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+    <th scope="row">country_id</th>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Paris</td>
+    <td>1</td>
+    <td>1</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Berlin</td>
+    <td>2</td>
+    <td>2</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Warsaw</td>
+    <td>4</td>
+    <td>NULL</td>
+    <td>NULL</td>
+  </tr>
+  <tr>
+    <td>NULL</td>
+    <td>NULL</td>
+    <td>NULL</td>
+    <td>3</td>
+    <td>Iceland</td>
+  </tr>
+</table>
 
 ### CROSS JOIN
 
@@ -215,7 +353,47 @@ SELECT city.name, country.name
 FROM city, country:
 ```
 
-TODO img
+<table id="cross_join">
+  <tr>
+    <th colspan="3" scope="row">CITY</th>
+    <th colspan="2" scope="row">COUNTRY</th>
+  </tr>
+  <tr>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+    <th scope="row">country_id</th>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Paris</td>
+    <td>1</td>
+    <td>1</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>Paris</td>
+    <td>1</td>
+    <td>2</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Berlin</td>
+    <td>2</td>
+    <td>1</td>
+    <td>France</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Berlin</td>
+    <td>2</td>
+    <td>2</td>
+    <td>Germany</td>
+  </tr>
+</table>
 
 ### NATURAL JOIN
 
@@ -227,7 +405,47 @@ FROM city
 NATURAL JOIN country;
 ```
 
-TODO img
+<table id="natural_join">
+  <tr>
+    <th colspan="3" scope="row">CITY</th>
+    <th colspan="2" scope="row">COUNTRY</th>
+  </tr>
+  <tr>
+    <th scope="row">country_id</th>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+    <th scope="row">name</th>
+    <th scope="row">id</th>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>6</td>
+    <td>San Marino</td>
+    <td>San Marino</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>7</td>
+    <td>Vatican City</td>
+    <td>Vatican City</td>
+    <td>7</td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>9</td>
+    <td>Greece</td>
+    <td>Greece</td>
+    <td>9</td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>11</td>
+    <td>Monaco</td>
+    <td>Monaco</td>
+    <td>10</td>
+  </tr>
+</table>
 
 **NATURAL JOIN** used these columns to match rows **city.id, city.name,
 country.id, country.name**. NATURAL JOIN is very rarely used in practice.
@@ -237,8 +455,6 @@ country.id, country.name**. NATURAL JOIN is very rarely used in practice.
 **GROUP BY** groups together rows that have the same values in specified
 columns. It computes summaries (aggregates) for each unique combination of
 values.
-
-TODO img
 
 ### AGGREGATE FUNCTIONS
 
@@ -253,21 +469,21 @@ TODO img
 Find out the number of cities:
 
 ```sql
-SELECT COUNT (*)
+SELECT COUNT(*)
 FROM city;
 ```
 
 Find out the number of cities with non-null ratings:
 
 ```sql
-SELECT COUNT (rating)
+SELECT COUNT(rating)
 FROM city;
 ```
 
 Find out the number of distinctive country values:
 
 ```sql
-SELECT COUNT (DISTINCT country_id)
+SELECT COUNT(DISTINCT country_id)
 FROM city;
 ```
 
@@ -370,6 +586,45 @@ Set operations are used to combine the results of two or more queries into a
 single result. The combined queries must return the same number of columns and
 compatible data types. The names of the corresponding columns can be different.
 
+<table>
+  <tr>
+    <th colspan="3" scope="row">CYCLING</th>
+    <th colspan="3" scope="row">SKATING</th>
+  </tr>
+  <tr>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+    <th scope="row">country</th>
+    <th scope="row">id</th>
+    <th scope="row">name</th>
+    <th scope="row">country</th>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>YK</td>
+    <td>DE</td>
+    <td>1</td>
+    <td>YK</td>
+    <td>DE</td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>ZG</td>
+    <td>DE</td>
+    <td>2</td>
+    <td>DF</td>
+    <td>DE</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>WT</td>
+    <td>PL</td>
+    <td>3</td>
+    <td>AK</td>
+    <td>PL</td>
+  </tr>
+</table>
+
 ### UNION
 
 UNION combines the results of two result sets and remove duplicates. UNION ALL
@@ -387,7 +642,14 @@ FROM skating
 WHERE country = 'DE'
 ```
 
-TODO img
+<div class="circle-container union">
+  <div class="circle circle-a">
+    <div class="circle circle-intersect"></div>
+  </div>
+  <div class="circle circle-b">
+    <div class="circle circle-intersect"></div>
+  </div>
+</div>
 
 ### INTERSECT
 
@@ -406,7 +668,14 @@ FROM skating
 WHERE country = 'DE':
 ```
 
-TODO img
+<div class="circle-container intersect">
+  <div class="circle circle-a">
+    <div class="circle circle-intersect"></div>
+  </div>
+  <div class="circle circle-b">
+    <div class="circle circle-intersect"></div>
+  </div>
+</div>
 
 ### EXCEPT
 
@@ -426,4 +695,11 @@ FROM skating
 WHERE country = 'DE':
 ```
 
-TODO img
+<div class="circle-container except">
+  <div class="circle circle-a">
+    <div class="circle circle-intersect"></div>
+  </div>
+  <div class="circle circle-b">
+    <div class="circle circle-intersect"></div>
+  </div>
+</div>
