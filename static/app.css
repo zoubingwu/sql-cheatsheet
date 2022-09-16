@@ -14,13 +14,13 @@ h1 {
 }
 h2 {
   font-size: 1.5rem;
-  margin-block-start: 0.5rem;
-  margin-block-end: 0.5rem;
+  margin-block-start: 0.6rem;
+  margin-block-end: 0.6rem;
 }
 h3 {
   font-size: 1.2rem;
-  margin-block-start: 0.2em;
-  margin-block-end: 0.2em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
 }
 p {
   margin-block-start: 0.1em;
@@ -189,7 +189,7 @@ pre[class*="language-"] {
   overflow: auto;
   position: relative;
   margin: 0.5em 0;
-  padding: 1.25em 1em;
+  padding: 0.5em 1em;
 }
 
 .language-css > code,

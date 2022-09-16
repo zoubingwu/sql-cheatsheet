@@ -1,8 +1,6 @@
 # SQL Basic Cheat Sheet
 
-## SQL
-
-SQL, or Structured Query Language,is a language to talk to databases. It allows
+**SQL**, or _Structured Query Language_,is a language to talk to databases. It allows
 you to select specific data and to build complex reports. Today, SQL is a
 universal language of data. It is used in practically all technologies that
 process data.
@@ -632,13 +630,9 @@ doesn't remove duplicate rows.
 This query displays German cyclists together with German skaters:
 
 ```sql
-SELECT name
-FROM cycling
-WHERE country = 'DE'
+SELECT name FROM cycling WHERE country = 'DE'
 UNION / UNION ALL
-SELECT name
-FROM skating
-WHERE country = 'DE';
+SELECT name FROM skating WHERE country = 'DE';
 ```
 
 <div class="circle-container union">
@@ -658,13 +652,9 @@ This query displays German cyclists who are also German skaters at the same
 time:
 
 ```sql
-SELECT name
-FROM cycling
-WHERE country = 'DE'
+SELECT name FROM cycling WHERE country = 'DE'
 INTERSECT
-SELECT name
-FROM skating
-WHERE country = 'DE';
+SELECT name FROM skating WHERE country = 'DE';
 ```
 
 <div class="circle-container intersect">
@@ -685,13 +675,9 @@ This query displays German cyclists unless they are also German skaters at the
 same time:
 
 ```sql
-SELECT name
-FROM cycling
-WHERE country = 'DE'
+SELECT name FROM cycling WHERE country = 'DE'
 EXCEPT / MINUS
-SELECT name
-FROM skating
-WHERE country = 'DE';
+SELECT name FROM skating WHERE country = 'DE';
 ```
 
 <div class="circle-container except">
