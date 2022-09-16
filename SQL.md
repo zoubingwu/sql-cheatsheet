@@ -1,4 +1,4 @@
-# SQL Basic Cheat Sheet
+# SQL Basics Cheat Sheet
 
 **SQL**, or _Structured Query Language_,is a language to talk to databases. It allows
 you to select specific data and to build complex reports. Today, SQL is a
