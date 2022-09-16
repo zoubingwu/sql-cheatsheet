@@ -18,7 +18,7 @@ export const handler: Handlers<HomePageProps> = {
 export default function Home({ data }: PageProps<HomePageProps>) {
   return (
     <div
-      className="flex flex-col p-4 md:max-w-[25%] md:max-h-screen md:flex-wrap"
+      className="flex flex-col p-4 md:w-[25%] md:max-h-screen md:flex-wrap"
       dangerouslySetInnerHTML={{ __html: data.content }}
     >
     </div>

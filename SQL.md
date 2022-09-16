@@ -111,7 +111,7 @@ Dublin in Ireland or Lublin in Poland):
 ```sql
 SELECT name
 FROM city
-WHERE name LIKE '_ublin':
+WHERE name LIKE '_ublin';
 ```
 
 ## OTHER OPERATORS
@@ -150,7 +150,7 @@ in both tables.
 ```sql
 SELECT city.name, country.name
 FROM city
-[INNER] JOIN country
+[INNER] JOIN country;
 ```
 
 <table id="inner_join">
@@ -348,9 +348,8 @@ SELECT city.name, country.name
 FROM city
 CROSS JOIN country;
 
-
 SELECT city.name, country.name
-FROM city, country:
+FROM city, country;
 ```
 
 <table id="cross_join">
@@ -577,7 +576,7 @@ WHERE EXISTS (
     SELECT *
     FROM city
     WHERE country _id = country.id
-)
+);
 ```
 
 ## SET OPERATIONS
@@ -639,7 +638,7 @@ WHERE country = 'DE'
 UNION / UNION ALL
 SELECT name
 FROM skating
-WHERE country = 'DE'
+WHERE country = 'DE';
 ```
 
 <div class="circle-container union">
@@ -665,7 +664,7 @@ WHERE country = 'DE'
 INTERSECT
 SELECT name
 FROM skating
-WHERE country = 'DE':
+WHERE country = 'DE';
 ```
 
 <div class="circle-container intersect">
@@ -692,7 +691,7 @@ WHERE country = 'DE'
 EXCEPT / MINUS
 SELECT name
 FROM skating
-WHERE country = 'DE':
+WHERE country = 'DE';
 ```
 
 <div class="circle-container except">
