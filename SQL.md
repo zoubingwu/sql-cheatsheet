@@ -9,14 +9,14 @@ process data.
 
 ## SAMPLE DATA
 
-COUNTRY
+### COUNTRY
 
 | id | name    | population | area   |
 | -- | ------- | ---------- | ------ |
 | 1  | France  | 66600000   | 640680 |
 | 2  | Germany | 80700000   | 357000 |
 
-CITY
+### CITY
 
 | id | name   | country_id | population | rating |
 | -- | ------ | ---------- | ---------- | ------ |

@@ -58,8 +58,8 @@ pre[class*="language-"] {
   color: #90a4ae;
   background: #fff;
   font-family: 'Fira Code', Roboto Mono, monospace, sans-serif;
-  font-size: 0.9em;
-  line-height: 1.5em;
+  font-size: 1rem;
+  line-height: 1.5rem;
   margin: 1rem 0;
 
   -moz-tab-size: 4;
