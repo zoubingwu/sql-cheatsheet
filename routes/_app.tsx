@@ -13,6 +13,7 @@ export default function App({ Component }: AppProps) {
           crossOrigin=""
         />
         <link rel="preconnect" href="https://unpkg.com" />
+        <title>SQL Basics Cheat Sheet</title>
       </Head>
       <Component />
       <link
